@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const api = require("./routes/index.js");
-const PORT = 3001;
+const PORT = process.env.PORT|| 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
